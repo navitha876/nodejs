@@ -11,9 +11,9 @@ var cors = require('cors');//CORS is shorthand for Cross-Origin Resource Sharing
 app.use(cors());
 // mysql database connection
 var connection = mysql2.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "root",
+  host: "s3iot.cpkkgw4i27pa.us-east-1.rds.amazonaws.com",
+  user: "admin",
+  password: "s3iot2022",
   database: "s3iot",
   port:"3306",
   insecureAuth : true
@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
   res.send('Successful response.');
 });
 
-app.listen(8000, () => console.log('Example app is listening on port 8000.'));
+app.listen(3000, () => console.log('Example app is listening on port 8000.'));
 
 
 app.get('/s3iot/:login', (req, res) => {
