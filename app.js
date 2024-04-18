@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
   res.send('Successful response.');
 });
 
-app.listen(8080, () => console.log('Example app is listening on port 8080.'));
+app.listen(8000, () => console.log('Example app is listening on port 8000.'));
 
 
 app.get('/s3iot/:login', (req, res) => {
